@@ -4,7 +4,7 @@
   --color-primary: #da4b4b;
   --color-secondary: #e8e2e2;
   --color-info: #f2f2f2;
-  --color-tertiary: #51095c;
+  --color-tertiary: #ed8422;
 }
 
 * {
@@ -35,7 +35,7 @@ button {
   margin: 0 auto;
 }
 /* nav styles */
-nav {
+.nav {
   box-shadow: 0px 4px 5px -5px rgba(0, 0, 0, 0.5);
   height: 88px;
 }
@@ -68,6 +68,50 @@ nav {
 .nav__menu {
   display: none;
 }
+
+/* Menu */
+
+.menu {
+  position: fixed;
+  background-color: #f8f8f8;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: 300ms ease;
+}
+
+.open .menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu__close {
+  position: absolute;
+  top: 44px;
+  right: 32px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.menu__link {
+  font-size: 24px;
+}
+
 /* header styles */
 
 .header__row {
@@ -102,7 +146,7 @@ nav {
 .header__grid {
   position: relative;
   width: calc(50% - 6px);
-  min-width: 200px;
+
   max-width: 500px;
   height: 200px;
   cursor: pointer;
@@ -135,14 +179,15 @@ nav {
 .products__row {
   display: flex;
   flex-direction: column;
-  gap: 44px;
+  align-items: center;
+  gap: 24px;
 }
 
 .products__title {
   font-size: 24px;
   font-weight: 600;
   text-transform: capitalize;
-  transform: translateX(50px);
+  transform: translateX(10px);
   /* text-align: center; */
 
   &::after {
@@ -158,6 +203,7 @@ nav {
 
 .products__list {
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   /* padding: 0 36px; */
   justify-content: center;
@@ -280,7 +326,7 @@ nav {
 
 .products__trending__title {
   /* text-align: center; */
-  transform: translateX(50px);
+  /* transform: translateX(10px); */
   font-size: 28px;
   font-weight: 600;
   &:after {
@@ -451,9 +497,29 @@ footer {
   }
 
   /* Products */
-
-  .product {
+  .products__list {
+    /* padding: 0 12px; */
     width: 100%;
+    /* background-color: violet; */
+    justify-content: flex-start;
+  }
+  .product {
+    gap: 0;
+    width: calc(50% - 12px);
+  }
+  .product__details__title {
+    font-size: 14px;
+  }
+  .product__details__price {
+    padding: 8px 0;
+    font-size: 12px;
+    & > span {
+      font-size: 14px;
+    }
+    & > button {
+      font-size: 14px;
+      padding: 4px 8px;
+    }
   }
 
   /* Newsletter */

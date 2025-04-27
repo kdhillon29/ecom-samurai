@@ -8,10 +8,12 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+
     <title>Samurai-Store</title>
   </head>
   <body>
-    <nav>
+    <nav class="nav">
       <div class="nav__container">
         <img src="assets/logo.png" alt="logo" class="nav__logo" />
         <div class="nav__links">
@@ -25,6 +27,16 @@
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
+      <nav class="menu">
+        <button class="menu__close" onclick="closeMenu()">
+          <i class="fa-solid fa-x"></i>
+        </button>
+        <div class="menu__links">
+          <a href="#" class="menu__link" onclick="closeMenu()"> Home </a>
+          <a href="#" class="menu__link" onclick="closeMenu()"> Products </a>
+          <a href="#" class="menu__link" onclick="closeMenu()"> Cart </a>
+        </div>
+      </nav>
     </nav>
     <!-- header section -->
     <header>
@@ -90,9 +102,7 @@
       <section id="products">
         <div class="container">
           <div class="row products__row">
-            <h2 class="products__title">
-              <span>Samurai</span>Products we are proud of
-            </h2>
+            <h2 class="products__title"><span>Samurai</span>Products</h2>
             <div class="products__list">
               <div class="product">
                 <img src="assets/product-img.jpg" alt="" class="product__img" />
