@@ -468,8 +468,8 @@ footer {
     text-align: center;
   }
 
-  .header__grid__title {
-    font-size: 24px;
+  .header__grid__item-caption {
+    font-size: 20px;
     left: 12px;
   }
 
@@ -530,5 +530,8 @@ footer {
 
   .newsletter__form__input {
     text-align: center;
+  }
+  .newsletter__form > button[type="submit"] {
+    background-color: var(--color-tertiary);
   }
 }
