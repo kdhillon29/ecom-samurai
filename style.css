@@ -330,7 +330,7 @@ button {
   font-size: 28px;
   font-weight: 600;
   &:after {
-    content: url("/assets/trending-small.jpg");
+    content: url("assets/trending-small.jpg");
     display: inline-block;
 
     transform: translate(2px, 5px);
